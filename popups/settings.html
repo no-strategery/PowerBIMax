@@ -1,12 +1,25 @@
 <html>
-  <div id="popup-table" class="table">
-    <div class="divTable">
-      <div class="divRow">
-        <div class="toggle-button">Enable</div>
-      </div>
-      <div class="divRow">
-        <div class="button">Settings</div>
-      </div>
-    </div>
-  </div>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="..\styles\kiosk.css">
+  </head>
+    <table>
+      <tr>
+        <td>
+          <!-- Rounded switch -->
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </td>
+        <td>
+          Enable
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div id="settings-button" class="settings-button">Settings</div>
+        </td>
+      </tr>
+    </table>
 </html>
