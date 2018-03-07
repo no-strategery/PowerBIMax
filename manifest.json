@@ -4,12 +4,20 @@
   "version": "1.0",
   "description": "MTD Kiosk extension-intended to cycle through chosen webpages",
 
+  "background": {
+      "scripts": ["scripts/background.js"]
+  },
+
+  "options_ui": {
+      "page": "options.html",
+      "browser_style": true
+  },
+
   "icons": {
     "48": "icons/sprig.png"
   },
 
   "browser_action": {
-    "default_icon":"icons/sprig.png",
-    "default_popup":"popups/settings.html"
+    "default_icon":"icons/sprig.png"
   }
 }
