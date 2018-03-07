@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+}
+
+#settings-table {
+  border-width: medium;
+  border-radius: 5px;
+  border-style: groove;
+  table-layout: auto;
+  width:100%;
+}
+
+td {
+  border: 1px dotted grey;
+  text-align: center;
+  height: 55px;
+}
+
+.site-entry {
+  width: 75%;
+}
+
+.site-enable {
+  width: auto;
+}
+
+.site-duration {
+  width: auto;
+}
+
+input[type=checkbox] {
+  -moz-transform: scale(1.5);
+}
+
+input[type=text] {
+  font-size: 1.5em;
+  margin: 4px;
+  height: 35px;
+  width: 99%;
+  text-align: center;
+}
+
+input[type=number] {
+  font-size: 1.5em;
+  margin: 4px;
+  height: 35px;
+  width: 95%;
+  text-align: center;
+  -moz-appearance: textfield;
+}

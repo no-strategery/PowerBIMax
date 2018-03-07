@@ -6,17 +6,42 @@
 
   <body>
     <h1>Kiosk Settings</h1>
-    <table class="url-entry" border="2" style="width:100%">
+    <table id="settings-table">
       <tr>
-        <div class="theader"><td>Site</td><td>Duration</td></div>
+        <th>Enabled</th>
+        <th>Site</th>
+        <th>Duration</th>
       </tr>
-      <tr>
-        <td><input type="text" title="Enter URL"/></td>
-        <td><label>Duration(sec):</label><input type="number"/></td>
+      <tr id="Site1">
+        <td class="site-enable"><input type="checkbox"/></td>
+        <td class="site-entry"><input type="text" placeholder="Enter site URL"/></td>
+        <td class="site-duration"><input type="number" placeholder="(sec)"/></td>
       </tr>
-      <tr>
-        <td><label>Site 2:</label><input type="text" title="Enter URL"/></td>
+      <tr id="Site2">
+        <td class="site-enable"><input type="checkbox"/></td>
+        <td class="site-entry"><input type="text" placeholder="Enter site URL"/></td>
+        <td class="site-duration"><input type="number" placeholder="(sec)"/></td>
+      </tr>
+      <tr id="Site3">
+        <td class="site-enable"><input type="checkbox"/></td>
+        <td class="site-entry"><input type="text" placeholder="Enter site URL"/></td>
+        <td class="site-duration"><input type="number" placeholder="(sec)"/></td>
+      </tr>
+      <tr id="Site4">
+        <td class="site-enable"><input type="checkbox"/></td>
+        <td class="site-entry"><input type="text" placeholder="Enter site URL"/></td>
+        <td class="site-duration"><input type="number" placeholder="(sec)"/></td>
+      </tr>
+      <tr id="Site5">
+        <td class="site-enable"><input type="checkbox"/></td>
+        <td class="site-entry"><input type="text" placeholder="Enter site URL"/></td>
+        <td class="site-duration"><input type="number" placeholder="(sec)"/></td>
       </tr>
     </table>
+    <hr>
+    <div id="submitform">
+      <input value="Save Changes" type="submit"/>
+      <input value="Cancel Changes" type="reset"/>
+    </div>
   </body>
 </html>
