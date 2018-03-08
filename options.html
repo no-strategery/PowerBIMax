@@ -4,7 +4,6 @@
   </head>
 
   <body>
-    <script src="scripts/options.js"></script>
     <h1>Kiosk Settings</h1>
     <table id="config-table">
       <tr>
@@ -13,7 +12,7 @@
         <th>Duration</th>
       </tr>
       <tr>
-        <td class="site-enable"><input id="Site1-enable" type="text"/></td>
+        <td class="site-enable"><input id="Site1-enable" type="checkbox"/></td>
         <td class="site-url"><input id="Site1-url" type="text" placeholder="Enter site URL"/></td>
         <td class="site-duration"><input id="Site1-duration" type="number" placeholder="(sec)"/></td>
       </tr>
@@ -44,9 +43,9 @@
     </table>
     <hr>
     <div id="submitform">
-      <input id="Save" value="Save Changes" type="button"/>
-      <input id="Cancel" value="Cancel Changes" type="button"/>
+      <input id="btn-Save" value="Save Changes" type="button"/>
+      <input id="btn-Cancel" value="Cancel Changes" type="button"/>
     </div>
-
+    <script src="scripts/options.js"></script>
   </body>
 </html>
