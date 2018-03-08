@@ -1,23 +1,34 @@
-/* Sample from "favourite-colour"
-function saveOptions(e) {
-  browser.storage.sync.set({
-    colour: document.querySelector("#colour").value
-  });
-  e.preventDefault();
-}
+const Site1en = document.getElementById("Site1-enable");
+const Site1url = document.querySelector("#Site1-url");
+const Site1dur = document.querySelector("#Site1-duration");
 
-function restoreOptions() {
-  var storageItem = browser.storage.managed.get('colour');
-  storageItem.then((res) => {
-    document.querySelector("#managed-colour").innerText = res.colour;
-  });
+function updateUI(restoredSettings) {
+  Site1en.value = restoredSettings.Site1.enable || "";
+  Site1url.value = restoredSettings.Site1.url || "";
+  Site1dur.value = restoredSettings.Site1.duration || "";
+};
 
-  var gettingItem = browser.storage.sync.get('colour');
-  gettingItem.then((res) => {
-    document.querySelector("#colour").value = res.colour || 'Firefox red';
-  });
-}
+function onError(e) {
+  console.error(e);
+};
 
-document.addEventListener('DOMContentLoaded', restoreOptions);
-document.querySelector("form").addEventListener("submit", saveOptions);
-*/
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("Save").addEventListener('click',function storeSettings() {
+      console.log("test");
+      const Site1en = document.querySelector("#Site1enable");
+      const Site1url = document.querySelector("#Site1-url");
+      const Site1dur = document.querySelector("#Site1-duration");
+
+      browser.storage.local.set({
+        Site1: {
+          enable: Site1en.value,
+          url: Site1url.value,
+          duration: Site1dur.value
+        }
+      });
+    });
+});
+
+
+const gettingStoredSettings = browser.storage.local.get();
+gettingStoredSettings.then(updateUI, onError);

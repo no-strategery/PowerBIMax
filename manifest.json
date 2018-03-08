@@ -19,5 +19,9 @@
 
   "browser_action": {
     "default_icon":"icons/sprig.png"
-  }
+  },
+
+  "permissions": [
+    "storage"
+  ]
 }

@@ -6,8 +6,6 @@ body {
   border-width: thin;
   border-radius: 5px;
   border-style: groove;
-  table-layout: auto;
-  width: 100%;
   background-color: #FFC435;
 }
 
@@ -18,26 +16,25 @@ td {
   padding:5px;
 }
 
-.site-entry {
+.site-url {
   width: 75%;
 }
 
 .site-enable {
-  width: auto;
+  width: 10%;
 }
 
 .site-duration {
-  width: auto;
+  width: 15%;
 }
 
 input[type=checkbox] {
-  -moz-transform: scale(1.5);
+  -moz-transform: scale(2);
 }
 
 input[type=text] {
   font-size: 1.5em;
   height: 35px;
-  width: 99%;
   text-align: center;
   border-style: inset;
   border-width: medium;
@@ -45,9 +42,7 @@ input[type=text] {
 
 input[type=number] {
   font-size: 1.5em;
-  margin: 4px;
   height: 35px;
-  width: 95%;
   text-align: center;
   border-style: inset;
   border-width: medium;
