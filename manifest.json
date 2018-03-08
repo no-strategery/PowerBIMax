@@ -13,10 +13,6 @@
       "browser_style": true
   },
 
-  "icons": {
-    "48": "icons/sprig.png"
-  },
-
   "browser_action": {
     "default_icon":"icons/logo.png"
   },
