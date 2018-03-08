@@ -18,7 +18,7 @@
   },
 
   "browser_action": {
-    "default_icon":"icons/sprig.png"
+    "default_icon":"icons/logo.png"
   },
 
   "permissions": [
