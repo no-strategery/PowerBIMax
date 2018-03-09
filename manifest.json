@@ -1,8 +1,19 @@
 {
   "manifest_version": 2,
-  "name": "MTD Kiosk",
+  "name": "Webpage Rotation Kiosk",
   "version": "1.0",
-  "description": "MTD Kiosk extension-intended to cycle through chosen webpages",
+  "description": "Kiosk extension intended to cycle through chosen webpages",
+
+  "applications": {
+    "gecko": {
+      "id": "{F44706CF-F40A-48F1-B1A9-D2BC3CA649AB}",
+      "strict_min_version": "42.0"
+    }
+  },
+
+  "icons": {
+    "48": "icons/logo.png"
+  },
 
   "background": {
       "scripts": ["scripts/background.js"]

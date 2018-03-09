@@ -25,19 +25,14 @@ input[type=checkbox] {
   -moz-transform: scale(2);
 }
 
-input[type=text] {
-  width: 95%;
-  font-size: 1.5em;
-  height: 35px;
-  text-align: center;
-  border-style: inset;
-  border-width: medium;
+input:focus {
+  background-color: DDDDDD;
 }
 
-input[type=number] {
+input[type=text],input[type=number] {
   width:95%;
-  font-size: 1.5em;
-  height: 35px;
+  font-size: 1em;
+  padding: 5px 5px;
   text-align: center;
   border-style: inset;
   border-width: medium;
