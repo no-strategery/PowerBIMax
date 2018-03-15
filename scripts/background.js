@@ -1,7 +1,5 @@
 function handleStartup() {
-  browser.tabs.create({
-    url:"http://chilloutandwatchsomecatgifs.com/"
-  });
+  tabid=browser.tabs.query();
 }
 
 function handleClick() {
