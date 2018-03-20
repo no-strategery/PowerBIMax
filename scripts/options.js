@@ -1,4 +1,4 @@
-// Set up fields for easy coding, store each as a const
+//// Set up fields for easy coding, store each as a const
 const Site1_enable = document.getElementById('Site1-enable');
 const Site1_url = document.getElementById('Site1-url');
 const Site1_duration = document.getElementById('Site1-duration');
