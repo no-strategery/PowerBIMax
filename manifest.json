@@ -29,7 +29,7 @@
   },
 
   "permissions": [
-    "storage",
-    "tabs"
+    "tabs",
+    "storage"
   ]
 }
