@@ -8,7 +8,7 @@ function tabCreate(tab) {
   console.log('Tab id is: ' + tab.id);
 }
 
-browser.tabs.onCreated.addListener((tab)=>tabCreate(tab));
+//browser.tabs.onCreated.addListener((tab)=>tabCreate(tab));
 
 function logTabsForWindows(windowInfoArray) {
   for (windowInfo of windowInfoArray) {
@@ -21,10 +21,11 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.windows.onCreated.addListener((tab) => {
+/*browser.windows.onCreated.addListener((tab) => {
   var getting = browser.windows.getAll({
     populate: true,
     windowTypes: ["normal"]
   });
   getting.then(logTabsForWindows, onError);
 });
+*/

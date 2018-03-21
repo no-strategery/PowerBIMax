@@ -39,14 +39,33 @@ function cancelChanges() {
 };
 */
 
+// class object for creating websites to add into kiosk rotation
+var id=1;
+function KioskSite() {
+  this.id = id++;
+  this.Enabled = true;
+  this.SiteURL = '';
+  this.SiteRefresh = 0;
+  this.SiteDuration = 60;
+}
+
+
+function kioskSiteAdd() {
+  newSite = new KioskSite;
+
+  console.log('Kiosk site created, id: ' + newSite.id);
+}
+
+function onKioskSiteAdd() {
+  console.log('Kiosk site promise fulfilled...');
+}
+
 function onError(e) {
   console.error(e);
 };
 
-// When loading page load any stored settings to show them
-var cancelSettings; // var for storing the results of the .get below, used to restore on cancelChanges
-const gettingStoredSettings = browser.storage.local.get();
-gettingStoredSettings.then(updateUI, onError);
+// eventlistener to create KioskSite
+document.getElementById('btn-addurl').addEventListener('click',kioskSiteAdd);
 
 // Set up an event listener to know when save button is pressed
 document.getElementById('btn-Save').addEventListener('click',storeSettings);
