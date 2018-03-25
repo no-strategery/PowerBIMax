@@ -7,7 +7,7 @@
   "applications": {
     "gecko": {
       "id": "{F44706CF-F40A-48F1-B1A9-D2BC3CA649AB}",
-      "strict_min_version": "45.0"
+      "strict_min_version": "48.0"
     }
   },
 
@@ -17,6 +17,15 @@
 
   "background": {
       "scripts": ["scripts/background.js"]
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      }
+    }
   },
 
   "options_ui": {
