@@ -34,7 +34,8 @@
   },
 
   "browser_action": {
-    "default_icon":"icons/logo.png"
+    "default_icon":"icons/logo.png",
+    "browser_style":false
   },
 
   "permissions": [
