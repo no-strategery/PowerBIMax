@@ -7,17 +7,18 @@ function handleClick() {
 // Code to run once DOM is loaded
 document.addEventListener('DOMContentLoaded',updateUI);
 function updateUI() {
-  console.log('Webpage Rotation Kiosk loaded');
+  console.log('Webpage Rotation Kiosk loaded.');
   // Load stored data for the extension
   let getting = browser.storage.local.get();
   getting.then(kioskPrep, onError);
 }
 
 function kioskPrep(data){
-  // do nothing if no kiosk pages enabled, no point
-  if ((data.Site1.enabled==true) || (data.Site2.enabled==true)
-   || (data.Site3.enabled==true) || (data.Site4.enabled==true)
-   || (data.Site5.enabled==true)) {
+  console.log('WRK: Saved data loaded.')
+  // do nothing if no kiosk pages have url set, no point
+  if ((data.Site1.url!='') || (data.Site2.url!='')
+   || (data.Site3.url!='') || (data.Site4.url!='')
+   || (data.Site5.url!='')) {
     // get open windows so we can close them after making our kiosk
     let closing = browser.windows.getAll({});
     // open kiosk window for Site1
@@ -35,7 +36,9 @@ function kioskPrep(data){
         closing.then({},onError);
       }
     },onError);
-  };
+  } else {
+    console.log('WRK: No pages currently stored. ')
+  }
 }
 // catch-all for unkept Promises
 function onError(e) {
