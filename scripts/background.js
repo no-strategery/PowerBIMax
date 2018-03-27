@@ -28,7 +28,7 @@ function kioskPrep(data){
         type:'panel',
         state:'fullscreen'
       });
-    kioskPage.then({},onError);
+    kioskPage.then((createdata)=>setRefresh(data.Site1,createdata),onError);
     // close all windows opened before the kiosk window
     closing.then((wList)=>{
       for (w of wList) {
@@ -37,9 +37,21 @@ function kioskPrep(data){
       }
     },onError);
   } else {
-    console.log('WRK: No pages currently stored. ')
+    console.log('WRK: No pages currently stored. ');
   }
 }
+
+// set refresh interval timer for current pages
+function setRefresh(siteinfo,createdata) {
+  if (siteinfo.autorefresh != null) {
+    if (siteinfo.autorefesh<5) {
+      let timerid=setInterval(()=>{console.log('interval trigger');},5000);
+    } else {
+      let timerid=setInterval(()=>{console.log('interval trigger');},createdata.autorefresh*1000);
+    }
+  }
+}
+
 // catch-all for unkept Promises
 function onError(e) {
   console.error(e);
